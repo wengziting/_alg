@@ -21,25 +21,21 @@
 
 ## 數學推導簡介
 
-### 1. $T(n) = T(n-1) + 8$
-* **代入展開**：
-  $$T(n) = T(n-1) + 8 = T(n-2) + 2 \cdot 8 = \dots = T(1) + 8(n - 1)$$
-* **代入 $T(1)=1$**：$1 + 8n - 8 = \mathbf{8n - 7}$ $\rightarrow \mathcal{O}(n)$
+### 1. 1. $T(n) = T(n - 1) + 8$
+   * **代入展開**：$T(n) = T(n - 1) + 8 = T(n - 2) + 2 \cdot 8 = \cdots = T(1) + 8(n - 1)$
+   * **代入 $T(1) = 1$**：$1 + 8n - 8 = \mathbf{8n - 7} \rightarrow O(n)$
 
-### 2. $T(n) = 2T(n-1) + 9$
-* **代入展開**：
-  $$T(n) = 2T(n-1) + 9 = 2^2 T(n-2) + 2 \cdot 9 + 9 = \dots = 2^{n-1} T(1) + 9 \sum_{i=0}^{n-2} 2^i$$
-* **等比級數求和**：$2^{n-1} \cdot 1 + 9 (2^{n-1} - 1) = 10 \cdot 2^{n-1} - 9 = \mathbf{5 \cdot 2^n - 9}$ $\rightarrow \mathcal{O}(2^n)$
+2. $T(n) = 2T(n - 1) + 9$
+   * **代入展開**：$T(n) = 2T(n - 1) + 9 = 2^2 T(n - 2) + 2 \cdot 9 + 9 = \cdots = 2^{n-1} T(1) + 9 \sum_{i=0}^{n-2} 2^i$
+   * **等比級數求和**：$2^{n-1} \cdot 1 + 9(2^{n-1} - 1) = 10 \cdot 2^{n-1} - 9 = \mathbf{5 \cdot 2^n - 9} \rightarrow O(2^n)$
 
-### 3. $T(n) = 2T(n/2) + 1$
-* **代入展開**（設 $n = 2^k \implies k = \log_2 n$）：
-  $$T(n) = 2T(n/2) + 1 = 4T(n/4) + 2 + 1 = \dots = 2^k T(1) + (2^k - 1)$$
-* **代入 $2^k = n$**：$n \cdot 1 + n - 1 = \mathbf{2n - 1}$ $\rightarrow \mathcal{O}(n)$
+3. $T(n) = 2T(n / 2) + 1$
+   * **代入展開（設 $n = 2^k \implies k = \log_2 n$）**：$T(n) = 2T(n / 2) + 1 = 4T(n / 4) + 2 + 1 = \cdots = 2^k T(1) + (2^k - 1)$
+   * **代入 $2^k = n$**：$n \cdot 1 + n - 1 = \mathbf{2n - 1} \rightarrow O(n)$
 
-### 4. $T(n) = T(n/2) + 1$
-* **代入展開**（設 $n = 2^k \implies k = \log_2 n$）：
-  $$T(n) = T(n/2) + 1 = T(n/4) + 2 = \dots = T(1) + k$$
-* **代入 $k = \log_2 n$**：$1 + \log_2 n = \mathbf{\log_2 n + 1}$ $\rightarrow \mathcal{O}(\log n)$
+4. $T(n) = T(n / 2) + 1$
+   * **代入展開（設 $n = 2^k \implies k = \log_2 n$）**：$T(n) = T(n / 2) + 1 = T(n / 4) + 2 = \cdots = T(1) + k$
+   * **代入 $k = \log_2 n$**：$1 + \log_2 n = \mathbf{\log_2 n + 1} \rightarrow O(\log n)$
 
 ---
 
