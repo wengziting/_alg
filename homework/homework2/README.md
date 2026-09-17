@@ -92,10 +92,5 @@ k
 
 ---
 
-## 執行方式
 
-1. 確保電腦已安裝 Python 3.x 環境。
-2. 執行腳本：
 
-```bash
-python main.py
