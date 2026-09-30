@@ -1,4 +1,4 @@
-
+[gemini](https://share.gemini.google/E4Dtf4BLwscW)
 # 梯度下降法 
 ## 1. 數學背景與目標
 在此實作中，我們的目標是尋找以下一元二次函數的最小值：
