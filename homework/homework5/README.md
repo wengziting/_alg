@@ -1,3 +1,4 @@
+[gemini](https://share.gemini.google/aMi8577GOoKZ)
 1. 河內塔問題 (Tower of Hanoi)
 
 遞迴解法：
