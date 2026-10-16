@@ -10,7 +10,7 @@ class Var(Expr):
     def free_vars(self):
         return {self.name}
 
-class Abs(Expr): # Lambda 抽象 (e.g., \x. M)
+class Abs(Expr):
     def __init__(self, param, body):
         self.param = param
         self.body = body
@@ -28,14 +28,12 @@ class App(Expr): # 函數應用 (e.g., M N)
     def free_vars(self):
         return self.func.free_vars() | self.arg.free_vars()
 
-# 產生不重複的新變數名稱 (Alpha 轉換使用)
 var_counter = 0
 def fresh_var(base_name):
     global var_counter
     var_counter += 1
     return f"{base_name}{var_counter}"
 
-# 實作代換: M[x := N] (把 M 裡面的 x 換成 N)
 def substitute(expr, var_name, replacement):
     if isinstance(expr, Var):
         if expr.name == var_name:
@@ -46,10 +44,8 @@ def substitute(expr, var_name, replacement):
                    substitute(expr.arg, var_name, replacement))
     elif isinstance(expr, Abs):
         if expr.param == var_name:
-            return expr # 變數被遮蔽 (Shadowing)
-        
-        # 避免變數捕捉 (Variable Capture): 
-        # 如果 Lambda 的參數出現在 replacement 的自由變數中，需進行 Alpha 轉換
+            return expr 
+
         if expr.param in replacement.free_vars():
             new_param = fresh_var(expr.param)
             new_body = substitute(expr.body, expr.param, Var(new_param))
@@ -57,19 +53,16 @@ def substitute(expr, var_name, replacement):
         
         return Abs(expr.param, substitute(expr.body, var_name, replacement))
 
-# 執行單步 Beta 歸約 (Normal Order: 最左最外優先)
 def reduce_step(expr):
     if isinstance(expr, App):
         # 找到 Redex: (\x. M) N -> M[x := N]
         if isinstance(expr.func, Abs):
             return substitute(expr.func.body, expr.func.param, expr.arg), True
-        
-        # 嘗試化簡左半部
+
         new_func, reduced = reduce_step(expr.func)
         if reduced:
             return App(new_func, expr.arg), True
-            
-        # 嘗試化簡右半部
+
         new_arg, reduced = reduce_step(expr.arg)
         if reduced:
             return App(expr.func, new_arg), True
@@ -77,14 +70,13 @@ def reduce_step(expr):
         return expr, False
 
     elif isinstance(expr, Abs):
-        # 化簡 Lambda 內部
+
         new_body, reduced = reduce_step(expr.body)
         return Abs(expr.param, new_body), reduced
 
     elif isinstance(expr, Var):
         return expr, False
 
-# 執行並印出完整過程
 def evaluate(expr, max_steps=100):
     print(f"初始: {expr}")
     step = 1
