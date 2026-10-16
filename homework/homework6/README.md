@@ -6,17 +6,7 @@ Lambda Calculus 是由阿隆佐·邱奇（Alonzo Church）在 1930 年代提出�
 
 ---
 
-## 📖 完整目錄
 
-1. [完整解譯器原始碼 (Source Code)](#1-完整解譯器原始碼-source-code)
-2. [系統需求與快速啟動](#2-系統需求與快速啟動)
-3. [語法映射與 AST 結構](#3-語法映射與-ast-結構)
-4. [解譯器底層運作全解讀](#4-解譯器底層運作全解讀)
-5. [計算過程完整解析 (Step-by-Step Analysis)](#5-計算過程完整解析-step-by-step-analysis)
-6. [進階撰寫：邱奇編碼 (Church Encoding)](#6-進階撰寫邱奇編碼-church-encoding)
-7. [API 原始碼對照表](#7-api-原始碼對照表)
-
----
 
 ## 1. 完整解譯器原始碼 (Source Code)
 
