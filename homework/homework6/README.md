@@ -1,3 +1,5 @@
+使用[GEMINI](https://share.gemini.google/J7QmEEfsNzCs)
+
 # 深入淺出：Lambda Calculus 解譯器 (The Ultimate Lambda Calculus Interpreter)
 
 本專案是一個基於純 Python 實作的**無型別 Lambda Calculus (Untyped Lambda Calculus)** 逐步解譯器。
