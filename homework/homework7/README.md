@@ -1,3 +1,4 @@
+[GEMINI](https://share.gemini.google/NGj6X3PWMFoI)
 # 1. 非動態規劃：純遞迴（Pure Recursion）
 
 ## 邏輯說明
