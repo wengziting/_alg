@@ -1,3 +1,5 @@
+[claude](https://claude.ai/share/1e450be4-084c-4e13-bed8-bbe285d34c54)
+
 # 搜尋演算法實作:五個經典問題
 
 用「搜尋法」解五個問題,每個問題一支獨立的 Python 程式(只用標準函式庫,Python 3.8+ 即可執行)。
