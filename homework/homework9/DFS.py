@@ -29,3 +29,4 @@ if __name__ == "__main__":
     print(f"八皇后共有 {len(sols)} 組解,第一組:{sols[0]}\n")
     show(sols[0])
     print("\n其他 N 的解數:", {n: len(solve(n)) for n in range(4, 9)})
+
