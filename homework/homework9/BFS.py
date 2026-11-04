@@ -62,3 +62,4 @@ if __name__ == "__main__":
         cargo = "獨自" if who == 0 else f"帶著{NAMES[who]}"
         print(f"第{n}步  農夫{cargo}{direction}\n        {banks(s)}")
     print(f"\n最少 {len(steps)} 步")
+    
