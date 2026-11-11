@@ -7,7 +7,7 @@
 | 3 | 列舉＋暴力 | 是 |  |  | [HW3](https://github.com/wengziting/_alg/tree/main/homework/homework3) |
 | 4 | 迭代法 | 是 |  |  | [HW4](https://github.com/wengziting/_alg/tree/main/homework/homework4) |
 | 5 | 遞迴，函數式編程 | 是 |  |  | [HW5](https://github.com/wengziting/_alg/tree/main/homework/homework5) |
-| 6 | Lambda Calculus | 否 | 是 |[證明]()https://github.com/wengziting/_alg/blob/main/homework/README1.md  | [HW6](https://github.com/wengziting/_alg/tree/main/homework/homework6) |
+| 6 | Lambda Calculus | 否 | 是 |[證明](https://github.com/wengziting/_alg/blob/main/homework/README1.md)  | [HW6](https://github.com/wengziting/_alg/tree/main/homework/homework6) |
 | 7 | 動態規劃與文字算法 | 是 |  |  | [HW7](https://github.com/wengziting/_alg/tree/main/homework/homework7) |
 | 8 | 優化算法 | 是 |  |  | [HW8](https://github.com/wengziting/_alg/tree/main/homework/homework8) |
 | 9 | 搜尋算法 | 是 |  |  | [HW9](https://github.com/wengziting/_alg/tree/main/homework/homework9) |
