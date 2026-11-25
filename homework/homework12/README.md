@@ -1,3 +1,4 @@
+[claude](https://claude.ai/share/17eeaa02-9317-4a09-9a15-b33ed62ba9a0)
 ## 第 1 章:希爾伯特的問題
 
 ### 1.1 推論引擎在做什麼
